@@ -24,10 +24,14 @@
         background-color: #f5f5f5;
       }
 
+      h2{
+        margin-top: 10px;
+      }
+
       .inner-item {
         text-align: center;
-	height: 400px;
-	max-height: 400px;
+	       height: 400px;
+	       max-height: 400px;
         img {
           margin: 0 auto;
         }
@@ -62,10 +66,12 @@
     <div class="container">
       <div class="row-fluid">
         <div class="span12">
-
-           <div class="span6">
-            <h2>New to iHava?</h2>
-            <p class="lead">Signing up is free and easy! Get started sharing and viewing awesome collections today.</p>
+          <h2>New to iHava?</h2>
+            <p class="lead" style="text-align: center;">Signing up is free and easy! Get started sharing and viewing collections of awesome stuff today.</p>
+            <div class="span4"></div>
+            <div class="span4" style="text-align: center; margin-left: 0;">
+                  <%= link_to("Sign Up Now!", signup_path, class: "btn") %>
+            </div>  
             <!--  Carousel - consult the Twitter Bootstrap docs at
       http://twitter.github.com/bootstrap/javascript.html#carousel --> 
                <div id="myCarousel" class="carousel slide"><!-- class of slide for animation -->
@@ -88,12 +94,6 @@
               </div><!-- /.carousel-inner -->
             </div>
           </div>
-
-          <div class="span6">
-            <div class="area">
-                  <%= link_to("Sign up now!!", signup_path, class: "btn") %>
-            </div>                            
-          </div>
         </div>
       </div>
     </div>
@@ -103,14 +103,6 @@
       <a href="" alt="">Contact</a> |
       <a href="" alt="">Credits</a>
     </footer>
-    <!-- Le javascript
-    ================================================== 
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-    <!-- Bootstrap jQuery plugins compiled and minified -->
     
     <script>
       $(document).ready(function(){

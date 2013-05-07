@@ -1,6 +1,5 @@
 IHava::Application.routes.draw do
   resources :items
-  resources :collections
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

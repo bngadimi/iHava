@@ -1,5 +1,6 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
+<p class="lead center">It's free and easy! And we won't share your info with anyone.</p>
 
 <div class="row">
   <div class="span6 offset3">
@@ -15,10 +16,10 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Confirm Password"%>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Create my account", class: "btn btn-large btn-block btn-primary" %>
     <% end %>
   </div>
 </div>

@@ -1,87 +1,46 @@
-<!DOCTYPE html>
-<html lang = "en">
-  <head>
-    <title>iHava - Sign Up</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
-    <link rel="icon" 
-      type="image/png" 
-      href="img/iHavaFavicon.png">
 
-   <style type="text/css">
-      body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
-      }
 
-      .inner-item {
-        text-align: center;
-	height: 400px;
-	max-height: 400px;
-        img {
-          margin: 0 auto;
-        }
-      } 
-    </style>
-  </head>
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
-          <a class="brand" href="#">iHava</a>
-          <div class="nav-collapse collapse">
-            <form class="form-inline navbar-form pull-right">
-              <input type="text" class="input-medium" placeholder="Email address">
-                 <input type="password" class="input-medium" placeholder="Password">
-              <button class="btn" type="submit">Sign in</button>
-            </form>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+<div class="center hero-unit">
+  <h1>iHava</h1>
 
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12">
-
-           <div class="span6">
-            <h2>New to iHava?</h2>
-            <p class="lead">Signing up is free and easy! Get started sharing and viewing awesome collections today.</p>
-            <!--  Carousel - consult the Twitter Bootstrap docs at
-      http://twitter.github.com/bootstrap/javascript.html#carousel --> 
-               <div id="myCarousel" class="carousel slide"><!-- class of slide for animation -->
+  <h2>
+    <div id="myCarousel" class="carousel slide"><!-- class of slide for animation -->
                 <div class="carousel-inner">
                   <div class="item"><!-- class of active since it's the first item -->
                     <div class="inner-item">
                     <img src="http://25.media.tumblr.com/tumblr_m0de6kunMH1qaugiso1_1280.jpg" alt="">
+                    </div>
                   </div>
-                </div>
-                <div class="item">
-                  <div class="inner-item">
-                    <img src="http://i.imgur.com/QIc9x.jpg" alt="">
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/J5gR7cm.jpg" alt="">
+                    </div>
                   </div>
-                </div>
-                <div class="item active">
-                  <div class="inner-item">
-                    <img src="http://i.imgur.com/ipTlAVnh.jpg" alt="">
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/rxAg8n5.jpg" alt="">
+                    </div>
                   </div>
-                </div>
-              </div><!-- /.carousel-inner -->
-            </div>
-          </div>
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/4E6yKYI.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/QIc9x.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="item active">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/ipTlAVnh.jpg" alt="">
+                    </div>
+                  </div>
+                </div><!-- /.carousel-inner -->
+              </div>
+  </h2>
 
-          <div class="span6">
-            <div class="area">
-                  <%= link_to("Sign up now!!", signup_path, class: "btn") %>
-            </div>                            
-          </div>
-        </div>
-      </div>
-    </div>
-
+<<<<<<< HEAD
     <hr>
     <footer style="text-align: center;">
       <a href="" alt="">Contact</a> |
@@ -89,14 +48,15 @@
     </footer>
 
     <script>
+=======
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+</div>
+
+<script>
+>>>>>>> 4fd115e0ed0a92c4cf009dfdb216dec165fa7cff
       $(document).ready(function(){
         $('.carousel').carousel({
           interval: 4000
         });
       });
     </script>
-  </body>
-    
-  </body>
-</html>
-

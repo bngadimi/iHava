@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang = "en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
-  
-    <title>iHava</title>
-    <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-      <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-   
-    <link rel="icon" 
-      type="image/png" 
-      href="img/iHavaFavicon.png">
+<% provide(:title, "Sign in") %>
+<h1>Sign in</h1>
 
-   <style type="text/css">
-      body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
-      }
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
 
+<<<<<<< HEAD
       h2{
         margin-top: 10px;
       }
@@ -50,9 +32,15 @@
                  <input type="password" class="input-medium" placeholder="Password">
               <button class="btn" type="submit">Sign in</button> -->
               <%= form_for(:session, url: sessions_path) do |f| %>
+=======
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+>>>>>>> 4fd115e0ed0a92c4cf009dfdb216dec165fa7cff
 
-                <%= f.text_field :email, class: "input-medium", placeholder: "Email address" %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
 
+<<<<<<< HEAD
                 <%= f.password_field :password, class: "input-medium", placeholder: "Password" %>
 
                 <%= f.submit "Sign in", class: "btn btn-small btn-primary" %>
@@ -115,4 +103,11 @@
     
   </body>
 </html>
+=======
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+>>>>>>> 4fd115e0ed0a92c4cf009dfdb216dec165fa7cff
 
+    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+  </div>
+</div>

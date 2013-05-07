@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or user
     else
-      puts "create method in SessionsController"
+      puts "This is the create method in SessionsController"
       render 'new'
     end
   end

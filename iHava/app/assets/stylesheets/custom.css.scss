@@ -1,4 +1,4 @@
-@import "bootstrap";
+@import 'bootstrap';
 
 /* universal */
 
@@ -49,4 +49,17 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid gray;
+    &:last-child {
+      border-bottom: 1px solid gray;
+    }
+  }
 }

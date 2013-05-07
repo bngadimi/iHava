@@ -1,9 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "iHava", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
+       <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
+          <a class="brand" href="#">iHava</a>
           <% if signed_in? %>
             <li><%= link_to "Users", users_path %></li>
             <li id="fat-menu" class="dropdown">
@@ -14,13 +13,13 @@
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
+                <li class="pull-right">
+                  <%= link_to "Sign out", signout_path, method: "delete", class: "btn btn-small btn-primary pull-right" %>
                 </li>
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
+            <li><%= link_to "Sign in", signin_path, class: "btn btn-small btn-primary pull-right enabled" %></li>
           <% end %>
         </ul>
       </nav>

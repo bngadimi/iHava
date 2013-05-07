@@ -9,3 +9,11 @@
     </section>
   </aside>
 </div>
+
+<% if @user.itemgroups.any? %>
+      <h3>Collections (<%= @user.itemgroups.count %>)</h3>
+      <ol class="microposts">
+        <%= render @itemgroups %>
+      </ol>
+      <%= will_paginate @itemgroups %>
+<% end %>

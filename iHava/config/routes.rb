@@ -1,4 +1,10 @@
 IHava::Application.routes.draw do
+  get "users/new"
+
+  match '/help', to: 'static_pages#signup'
+  match '/display_collection', to: 'users#display_collection'
+  match '/favorites', to: 'users#favorites'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

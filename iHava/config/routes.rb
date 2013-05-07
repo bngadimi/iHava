@@ -1,4 +1,6 @@
 IHava::Application.routes.draw do
+  get "users/new"
+
   match '/help', to: 'static_pages#signup'
 
   # The priority is based upon order of creation:

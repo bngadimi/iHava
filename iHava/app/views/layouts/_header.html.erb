@@ -4,6 +4,7 @@
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
           <a class="brand" href="#">iHava</a>
           <% if signed_in? %>
+          <ul class="nav">
             <li><%= link_to "Users", users_path %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -13,13 +14,14 @@
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
-                <li class="pull-right">
-                  <%= link_to "Sign out", signout_path, method: "delete", class: "btn btn-small btn-primary pull-right" %>
+                <li>
+                  <%= link_to "Sign out", signout_path, method: "delete", class: "btn btn-small btn-primary" %>
                 </li>
               </ul>
             </li>
+          </ul>
           <% else %>
-            <li><%= link_to "Sign in", signin_path, class: "btn btn-small btn-primary pull-right enabled" %></li>
+            <li><%= link_to "Sign in", signin_path, class: "btn btn-small btn-primary pull-right" %></li>
           <% end %>
         </ul>
       </nav>

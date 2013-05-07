@@ -45,7 +45,7 @@
               <<!-- input type="text" class="input-medium" placeholder="Email address">
                  <input type="password" class="input-medium" placeholder="Password">
               <button class="btn" type="submit">Sign in</button> -->
-              <%= form_for(:session, url: signin_path) do |f| %>
+              <%= form_for(:session, url: sessions_path) do |f| %>
 
                 <%= f.text_field :email, class: "input-medium", placeholder: "Email address" %>
 

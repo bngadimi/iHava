@@ -6,7 +6,6 @@ IHava::Application.routes.draw do
 
   root to: 'sessions#new'
   match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
   match '/display_collection', to: 'users#display_collection'

@@ -1,11 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    if signed_in?
-      redirect_to "/users/5"
-    else
-      render :layout => false
-    end
+    render :layout => false
   end
 
   def create

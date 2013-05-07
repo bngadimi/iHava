@@ -1,4 +1,7 @@
 IHava::Application.routes.draw do
+  resources :collections
+
+
   resources :users
 
   root to: 'static_pages#login'

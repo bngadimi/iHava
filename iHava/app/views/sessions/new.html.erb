@@ -11,8 +11,99 @@
       <%= f.label :password %>
       <%= f.password_field :password %>
 
+
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %>
+
+                <%= f.password_field :password, class: "input-medium", placeholder: "Password" %>
+
+                <%= f.submit "Sign in", class: "btn btn-small btn-primary" %>
+              <% end %>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+
+           <div class="span6">
+            <h2>New to iHava?</h2>
+            <p class="lead">Signing up is free and easy! Get started sharing and viewing awesome collections today.</p>
+            <!--  Carousel - consult the Twitter Bootstrap docs at
+      http://twitter.github.com/bootstrap/javascript.html#carousel --> 
+                            <div id="myCarousel" class="carousel slide"><!-- class of slide for animation -->
+                <div class="carousel-inner">
+                  <div class="item"><!-- class of active since it's the first item -->
+                    <div class="inner-item">
+                    <img src="http://25.media.tumblr.com/tumblr_m0de6kunMH1qaugiso1_1280.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/J5gR7cm.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/rxAg8n5.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/4E6yKYI.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/QIc9x.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="item active">
+                    <div class="inner-item">
+                      <img src="http://i.imgur.com/ipTlAVnh.jpg" alt="">
+                    </div>
+                  </div>
+                </div><!-- /.carousel-inner -->
+              </div>
+            </div>
+          <div class="span6">
+            <div class="area">
+                  <%= link_to("Sign up now!!", signup_path, class: "btn") %>
+            </div>                            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <footer style="text-align: center;">
+      <a href="" alt="">Contact</a> |
+      <a href="" alt="">Credits</a>
+    </footer>
+    <!-- Le javascript
+    ================================================== 
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script>
+  </body>
+    
+  </body>
+</html>
+>>>>>>> 174cfc9bfc350c112b4c3033f76b27defdba486a
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>

@@ -1,5 +1,5 @@
 IHava::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   match '/help', to: 'static_pages#signup'
   match '/display_collection', to: 'users#display_collection'

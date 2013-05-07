@@ -4,7 +4,8 @@ IHava::Application.routes.draw do
 
   resources :users
 
-  match '/help', to: 'static_pages#signup'
+  root to: 'static_pages#login'
+
   match '/display_collection', to: 'users#display_collection'
   match '/favorites', to: 'users#favorites'
 

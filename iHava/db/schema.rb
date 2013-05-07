@@ -13,6 +13,22 @@
 
 ActiveRecord::Schema.define(:version => 20130507123124) do
 
+  create_table "collections", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "tags"
+    t.string   "items"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"

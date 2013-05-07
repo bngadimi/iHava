@@ -1,14 +1,12 @@
 IHava::Application.routes.draw do
   resources :items
-
-
   resources :collections
-
-
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
-  root to: 'static_pages#login'
+  root to: 'sessions#new'
   match '/signup',  to: 'users#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   match '/display_collection', to: 'users#display_collection'
   match '/favorites', to: 'users#favorites'

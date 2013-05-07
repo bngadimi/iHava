@@ -1,4 +1,9 @@
 class StaticPagesController < ApplicationController
-  def signup
+  
+  def about
   end
+
+  def splash
+  end
+  
 end

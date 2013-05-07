@@ -1,4 +1,7 @@
 IHava::Application.routes.draw do
+  resources :collections
+
+
   resources :users
 
   match '/help', to: 'static_pages#signup'

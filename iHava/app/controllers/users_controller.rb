@@ -10,9 +10,6 @@ class UsersController < ApplicationController
   def display_collection
   end
 
-  def favorites
-  end
-
   def create
     @user = User.new(params[:user])
     if @user.save

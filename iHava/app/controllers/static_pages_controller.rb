@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
-  def splash
+  
+  def about
   end
+  
 end

@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang = "en">
   <head>
-    <title>iHava - Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+  
+    <title>iHava</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+   
     <link rel="icon" 
       type="image/png" 
       href="img/iHavaFavicon.png">
@@ -27,7 +35,7 @@
     </style>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <header class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button>
@@ -37,7 +45,7 @@
               <<!-- input type="text" class="input-medium" placeholder="Email address">
                  <input type="password" class="input-medium" placeholder="Password">
               <button class="btn" type="submit">Sign in</button> -->
-              <%= form_for(:session, url: sessions_path) do |f| %>
+              <%= form_for(:session, url: signin_path) do |f| %>
 
                 <%= f.text_field :email, class: "input-medium", placeholder: "Email address" %>
 
@@ -49,7 +57,7 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-    </div>
+    </header>
 
     <div class="container">
       <div class="row-fluid">

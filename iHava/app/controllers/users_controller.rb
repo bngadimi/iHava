@@ -4,5 +4,8 @@ class UsersController < ApplicationController
 
   def display_collection
   end
-  
+
+  def favorites
+  end
+
 end

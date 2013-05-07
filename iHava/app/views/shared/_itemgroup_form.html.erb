@@ -1,0 +1,10 @@
+<%= form_for(@itemgroup) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :name, placeholder: "Name your collection..." %>
+  </div>
+  <div class="field">
+    <%= f.text_area :description, placeholder: "Describe it!" %>
+  </div>
+  <%= f.submit "Add it!", class: "btn btn-large btn-primary" %>
+<% end %>

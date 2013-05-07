@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507123124) do
+ActiveRecord::Schema.define(:version => 20130507183722) do
 
   create_table "collections", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(:version => 20130507123124) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "itemgroups", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "itemgroups", ["user_id", "created_at"], :name => "index_itemgroups_on_user_id_and_created_at"
 
   create_table "items", :force => true do |t|
     t.string   "name"

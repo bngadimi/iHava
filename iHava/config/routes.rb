@@ -1,15 +1,15 @@
 IHava::Application.routes.draw do
-  resources :items
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :itemgroups, only: [:create, :destroy]
 
   root to: 'static_pages#splash'
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  match '/display_collection', to: 'users#display_collection'
-  match '/favorites', to: 'users#favorites'
+  # match '/display_collection', to: 'users#display_collection'
+  # match '/favorites', to: 'users#favorites'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
